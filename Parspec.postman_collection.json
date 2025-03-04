@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "cd8f16fc-0f92-4e7c-b125-cbe11ee2fd94",
+		"name": "Parspec",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24877229"
+	},
+	"item": [
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"test\",\n    \"item_ids\": [\"1\", \"2\"],\n    \"total_amount\": 24\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip_port}}/orders",
+					"protocol": "http",
+					"host": [
+						"{{ip_port}}"
+					],
+					"path": [
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Order status",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"test\",\n    \"item_ids\": [\"1\", \"2\"],\n    \"total_amount\": 24\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip_port}}/orders/0cb92c0d-8a0d-4dc3-ab21-efa8345907d8",
+					"protocol": "http",
+					"host": [
+						"{{ip_port}}"
+					],
+					"path": [
+						"orders",
+						"0cb92c0d-8a0d-4dc3-ab21-efa8345907d8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Metrics",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"user_id\": \"test\",\n    \"item_ids\": [\"1\", \"2\"],\n    \"total_amount\": 24\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://{{ip_port}}/orders/metrics",
+					"protocol": "http",
+					"host": [
+						"{{ip_port}}"
+					],
+					"path": [
+						"orders",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "ip_port",
+			"value": "localhost:5000",
+			"type": "string"
+		}
+	]
+}
