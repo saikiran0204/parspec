@@ -67,14 +67,11 @@ curl -X GET "http://127.0.0.1:5000/metrics"
 
 ### 1. **Flask with Flask-SQLAlchemy**
 - Used Flask-SQLAlchemy for easy ORM-based database interaction.
-- Considered using an async ORM like Tortoise but opted for SQLAlchemy's async support for better compatibility.
+- Considered using an async ORM like Tortoise but opted for SQLAlchemy's support for better compatibility.
 
 ### 2. **Background Queue for Order Processing**
 - Used Python’s built-in `queue.Queue` to process orders asynchronously.
 - Considered Celery but avoided it for simplicity and fewer dependencies.
-
-### 3. **Asynchronous Metrics Endpoint**
-- Used `asyncio` and `run_in_executor` to allow database queries to be executed asynchronously, preventing blocking behavior.
 
 ---
 
@@ -87,5 +84,5 @@ curl -X GET "http://127.0.0.1:5000/metrics"
 ---
 
 ## Repository Link
-[GitHub Repository](https://github.com/your-repo-link)
+[GitHub Repository](https://github.com/saikiran0204/parspec)
 
