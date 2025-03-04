@@ -3,8 +3,8 @@ import threading
 import time
 import uuid
 
-BASE_URL = "http://127.0.0.1:5000"
-NUM_REQUESTS = 2000  # Number of concurrent requests to simulate
+BASE_URL = "http://3.84.157.161"
+NUM_REQUESTS = 1000  # Number of concurrent requests to simulate
 
 # Store request times
 request_times = []

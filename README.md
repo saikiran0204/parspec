@@ -10,7 +10,7 @@ This is a Flask-based order processing system that supports placing orders, trac
 ### 1. Place an Order
 **Request:**
 ```bash
-curl -X POST "http://127.0.0.1:5000/orders" \
+curl -X POST "http://3.84.157.161/orders" \
      -H "Content-Type: application/json" \
      -d '{
            "user_id": "123e4567-e89b-12d3-a456-426614174000",
@@ -32,7 +32,7 @@ curl -X POST "http://127.0.0.1:5000/orders" \
 ### 2. Get Order Status
 **Request:**
 ```bash
-curl -X GET "http://127.0.0.1:5000/orders/550e8400-e29b-41d4-a716-446655440000"
+curl -X GET "http://3.84.157.161/orders/550e8400-e29b-41d4-a716-446655440000"
 ```
 **Response:**
 ```json
@@ -45,7 +45,7 @@ curl -X GET "http://127.0.0.1:5000/orders/550e8400-e29b-41d4-a716-446655440000"
 ### 3. Get Metrics
 **Request:**
 ```bash
-curl -X GET "http://127.0.0.1:5000/metrics"
+curl -X GET "http://3.84.157.161/metrics"
 ```
 **Response:**
 ```json
@@ -86,3 +86,7 @@ curl -X GET "http://127.0.0.1:5000/metrics"
 ## Repository Link
 [GitHub Repository](https://github.com/saikiran0204/parspec)
 
+## Server Configuration
+- Server is hosted on AWS EC2 with t2.micro
+- Ip Address: 3.84.157.161
+- Port: 80
